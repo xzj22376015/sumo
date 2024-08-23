@@ -12,6 +12,6 @@ from_trainstop
 
 from_containerstop
 
-from_charginstation
+from_chargingstation
 
 from_parkingarea
