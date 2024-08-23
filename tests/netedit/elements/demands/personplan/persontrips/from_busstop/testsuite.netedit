@@ -5,3 +5,9 @@ to_junction
 to_busstop
 
 to_trainstop
+
+to_containerstop
+
+to_chargingstation
+
+to_parkingarea
