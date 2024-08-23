@@ -2,6 +2,8 @@ to_edge
 
 to_junction
 
+to_taz
+
 to_busstop
 
 to_trainstop
