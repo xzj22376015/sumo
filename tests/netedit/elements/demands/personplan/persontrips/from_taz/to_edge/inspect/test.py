@@ -44,17 +44,35 @@ netedit.leftClick(referencePosition, netedit.positions.elements.demands.TAZRed)
 # press enter to create route
 netedit.typeEnter()
 
-# go to personTrip.busStop.busStop mode
+# go to personTrip.junction.edge mode
 netedit.personPlanMode()
 
-# go to personTrip.busStop.busStop mode
+# go to personTrip.junction.edge mode
 netedit.changePersonPlanMode("personTrip")
 
-# create personTrip.busStop.busStop
-netedit.leftClick(referencePosition, netedit.positions.elements.edgeCenter0)
+# create personTrip.junction.edge
+netedit.leftClick(referencePosition, netedit.positions.elements.edge2)
 
 # press enter to create route
 netedit.typeEnter()
+
+# go to inspect mode
+netedit.inspectMode()
+
+# now inspect plan top
+netedit.leftClick(referencePosition, netedit.positions.elements.demands.planEdge2Ped)
+
+# change depart with an invalid value
+netedit.modifyAttribute(netedit.attrs.personTrip.junction.edge.inspect.arrivalPos, "dummy", False)
+
+# change depart with an invalid value
+netedit.modifyAttribute(netedit.attrs.personTrip.junction.edge.inspect.arrivalPos, "", False)
+
+# change depart with an invalid value
+netedit.modifyAttribute(netedit.attrs.personTrip.junction.edge.inspect.arrivalPos, "-6", False)
+
+# change depart with an invalid value
+netedit.modifyAttribute(netedit.attrs.personTrip.junction.edge.inspect.arrivalPos, "2.5", False)
 
 # Check undo redo
 netedit.checkUndoRedo(referencePosition)
