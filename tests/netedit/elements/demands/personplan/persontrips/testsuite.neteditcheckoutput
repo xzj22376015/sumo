@@ -2,8 +2,16 @@ common
 
 from_edge
 
-from_busstop
-
 from_junction
 
 from_taz
+
+from_busstop
+
+from_trainstop
+
+from_containerstop
+
+from_charginstation
+
+from_parkingarea
