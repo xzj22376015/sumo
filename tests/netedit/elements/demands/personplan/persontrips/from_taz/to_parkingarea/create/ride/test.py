@@ -44,14 +44,14 @@ netedit.leftClick(referencePosition, netedit.positions.elements.demands.TAZRed)
 # press enter to create route
 netedit.typeEnter()
 
-# go to personTrip.busStop.busStop mode
+# go to personTrip.parkingArea.parkingArea mode
 netedit.personPlanMode()
 
-# go to personTrip.busStop.busStop mode
+# go to personTrip.parkingArea.parkingArea mode
 netedit.changePersonPlanMode("personTrip")
 
-# create personTrip.busStop.busStop
-netedit.leftClick(referencePosition, netedit.positions.elements.demands.busStop)
+# create personTrip.parkingArea.parkingArea
+netedit.leftClick(referencePosition, netedit.positions.elements.demands.parkingArea)
 
 # press enter to create route
 netedit.typeEnter()
