@@ -39,7 +39,7 @@ netedit.changePersonPlan("personTrip", False)
 
 # create route using one edge
 netedit.leftClick(referencePosition, netedit.positions.elements.edge0)
-netedit.leftClick(referencePosition, netedit.positions.elements.junction1)
+netedit.leftClick(referencePosition, netedit.positions.elements.demands.TAZRed)
 
 # press enter to create route
 netedit.typeEnter()
@@ -51,7 +51,7 @@ netedit.personPlanMode()
 netedit.changePersonPlanMode("personTrip")
 
 # create personTrip.busStop.busStop
-netedit.leftClick(referencePosition, netedit.positions.elements.demands.busStopB)
+netedit.leftClick(referencePosition, netedit.positions.elements.demands.busStop)
 
 # press enter to create route
 netedit.typeEnter()
