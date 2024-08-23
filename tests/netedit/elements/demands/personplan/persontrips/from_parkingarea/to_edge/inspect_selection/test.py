@@ -33,7 +33,7 @@ netedit.supermodeDemand()
 
 # select two-way mode
 netedit.leftClick(referencePosition, netedit.positions.elements.edge0)
-netedit.leftClick(referencePosition, netedit.positions.elements.demands.busStop)
+netedit.leftClick(referencePosition, netedit.positions.elements.demands.parkingArea)
 
 # go to select mode
 netedit.selectMode()

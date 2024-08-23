@@ -27,7 +27,7 @@ import neteditTestFunctions as netedit  # noqa
 
 # Open netedit
 neteditProcess, referencePosition = netedit.setupAndStart(neteditTestRoot)
-netedit.leftClick(referencePosition, netedit.positions.elements.demands.busStop)
+netedit.leftClick(referencePosition, netedit.positions.elements.demands.trainStop)
 
 # go to demand mode
 netedit.supermodeDemand()
@@ -40,7 +40,7 @@ netedit.changePersonPlan("walk", False)
 
 # create route using one edge
 netedit.leftClick(referencePosition, netedit.positions.elements.edge0)
-netedit.leftClick(referencePosition, netedit.positions.elements.demands.busStop)
+netedit.leftClick(referencePosition, netedit.positions.elements.demands.trainStop)
 
 # press enter to create route
 netedit.typeEnter()
