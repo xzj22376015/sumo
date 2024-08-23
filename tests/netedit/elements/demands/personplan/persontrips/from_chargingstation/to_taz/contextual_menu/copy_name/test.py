@@ -51,7 +51,7 @@ netedit.personPlanMode()
 netedit.changePersonPlanMode("personTrip")
 
 # create personTrip.busStop.busStop
-netedit.leftClick(referencePosition, netedit.positions.elements.demands.TAZGreen)
+netedit.leftClick(referencePosition, netedit.positions.elements.demands.TAZRed)
 
 # press enter to create route
 netedit.typeEnter()
@@ -60,7 +60,7 @@ netedit.typeEnter()
 netedit.inspectMode()
 
 # transform
-netedit.contextualMenuOperation(referencePosition, netedit.positions.elements.demands.TAZGreen,
+netedit.contextualMenuOperation(referencePosition, netedit.positions.elements.demands.TAZRed,
                                 netedit.contextualMenu.vehicles.copyName)
 
 # Check undos

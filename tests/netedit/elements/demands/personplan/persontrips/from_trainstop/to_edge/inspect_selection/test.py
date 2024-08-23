@@ -32,7 +32,8 @@ neteditProcess, referencePosition = netedit.setupAndStart(neteditTestRoot)
 netedit.supermodeDemand()
 
 # select two-way mode
-netedit.changeEditMode(netedit.attrs.modes.demand.showPersonPlans)
+netedit.leftClick(referencePosition, netedit.positions.elements.edge0)
+netedit.leftClick(referencePosition, netedit.positions.elements.demands.busStop)
 
 # go to select mode
 netedit.selectMode()
