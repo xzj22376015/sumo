@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<!-- generated on 2024-08-02 10:31:51 by Eclipse SUMO netedit Version v1_20_0+1519-a635611cf51
+<!-- generated on 2024-08-23 15:26:14 by Eclipse SUMO netedit Version v1_20_0+1744-c01c5fa6b16
 This data file and the accompanying materials
 are made available under the terms of the Eclipse Public License v2.0
 which accompanies this distribution, and is available at
@@ -15,8 +15,8 @@ SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-or-later
 
 <additional xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/additional_file.xsd">
     <!-- StoppingPlaces -->
-    <chargingStation id="chargingStationA" lane="Edge2_1" startPos="46.00" endPos="56.00"/>
-    <chargingStation id="chargingStationB" name="i" lane="EdgeCenter1_1" startPos="24.18" endPos="31.09"/>
+    <busStop id="busStopA" lane="Edge2_1" startPos="46.00" endPos="56.00"/>
+    <busStop id="busStopB" name="i" lane="EdgeCenter1_1" startPos="24.18" endPos="31.09"/>
     <trainStop id="trainStopA" lane="Edge2_1" startPos="2.00" endPos="12.00"/>
     <trainStop id="trainStopB" name="m" lane="EdgeCenter0_1" startPos="6.05" endPos="12.95"/>
     <containerStop id="containerStopA" lane="Edge2_1" startPos="34.00" endPos="44.00"/>
