@@ -12,6 +12,6 @@
 
     <person id="p_1" depart="0.00">
         <walk from="Edge0" to="Edge1"/>
-        <personTrip toTaz="taz_green" lines="ANY"/>
+        <personTrip toTaz="taz_red" lines="ANY"/>
     </person>
 </routes>
