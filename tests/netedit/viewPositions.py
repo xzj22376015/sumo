@@ -549,7 +549,7 @@ class elements:
             x = 623
             y = 23
 
-        class chargingStation:
+        class chargingStationB:
             x = 287
             y = 220
 
@@ -557,7 +557,7 @@ class elements:
             x = 525
             y = -5
 
-        class parkingArea:
+        class parkingAreaB:
             x = 352.00
             y = 282
 
