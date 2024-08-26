@@ -109,6 +109,67 @@ GNEPlanParents::GNEPlanParents(const CommonXMLStructure::PlanParameters& planPar
 }
 
 
+bool
+GNEPlanParents::checkIntegrity(SumoXMLTag planTag, const GNEDemandElement* parent, const CommonXMLStructure::PlanParameters& planParameters) const {
+    if (!planParameters.fromEdge.empty() && !fromEdge) {
+        WRITE_WARNING(TLF("Invalid from edge '%' used in % of % '%'", planParameters.fromEdge, toString(planTag), parent->getTagStr(), parent->getID()));
+        return false;
+    } else if (!planParameters.toEdge.empty() && !toEdge) {
+        WRITE_WARNING(TLF("Invalid to edge '%' used in % of % '%'", planParameters.toEdge, toString(planTag), parent->getTagStr(), parent->getID()));
+        return false;
+    } else if (!planParameters.fromJunction.empty() && !fromJunction) {
+        WRITE_WARNING(TLF("Invalid from junction '%' used in % of % '%'", planParameters.fromJunction, toString(planTag), parent->getTagStr(), parent->getID()));
+        return false;
+    } else if (!planParameters.toJunction.empty() && !toJunction) {
+        WRITE_WARNING(TLF("Invalid to junction '%' used in % of % '%'", planParameters.toJunction, toString(planTag), parent->getTagStr(), parent->getID()));
+        return false;
+    } else if (!planParameters.fromTAZ.empty() && !fromTAZ) {
+        WRITE_WARNING(TLF("Invalid from TAZ '%' used in % of % '%'", planParameters.fromTAZ, toString(planTag), parent->getTagStr(), parent->getID()));
+        return false;
+    } else if (!planParameters.toTAZ.empty() && !toTAZ) {
+        WRITE_WARNING(TLF("Invalid to TAZ '%' used in % of % '%'", planParameters.toTAZ, toString(planTag), parent->getTagStr(), parent->getID()));
+        return false;
+    } else if (!planParameters.fromBusStop.empty() && !fromStoppingPlace) {
+        WRITE_WARNING(TLF("Invalid from bus stop '%' used in % of % '%'", planParameters.fromBusStop, toString(planTag), parent->getTagStr(), parent->getID()));
+        return false;
+    } else if (!planParameters.fromTrainStop.empty() && !fromStoppingPlace) {
+        WRITE_WARNING(TLF("Invalid from train stop '%' used in % of % '%'", planParameters.fromTrainStop, toString(planTag), parent->getTagStr(), parent->getID()));
+        return false;
+    } else if (!planParameters.fromContainerStop.empty() && !fromStoppingPlace) {
+        WRITE_WARNING(TLF("Invalid from container stop '%' used in % of % '%'", planParameters.fromContainerStop, toString(planTag), parent->getTagStr(), parent->getID()));
+        return false;
+    } else if (!planParameters.fromChargingStation.empty() && !fromStoppingPlace) {
+        WRITE_WARNING(TLF("Invalid from charging station '%' used in % of % '%'", planParameters.fromChargingStation, toString(planTag), parent->getTagStr(), parent->getID()));
+        return false;
+    } else if (!planParameters.fromParkingArea.empty() && !fromStoppingPlace) {
+        WRITE_WARNING(TLF("Invalid from parking area '%' used in % of % '%'", planParameters.fromParkingArea, toString(planTag), parent->getTagStr(), parent->getID()));
+        return false;
+    } else if (!planParameters.toBusStop.empty() && !toStoppingPlace) {
+        WRITE_WARNING(TLF("Invalid to bus stop '%' used in % of % '%'", planParameters.toBusStop, toString(planTag), parent->getTagStr(), parent->getID()));
+        return false;
+    } else if (!planParameters.toTrainStop.empty() && !toStoppingPlace) {
+        WRITE_WARNING(TLF("Invalid to train stop '%' used in % of % '%'", planParameters.toTrainStop, toString(planTag), parent->getTagStr(), parent->getID()));
+        return false;
+    } else if (!planParameters.toContainerStop.empty() && !toStoppingPlace) {
+        WRITE_WARNING(TLF("Invalid to container stop '%' used in % of % '%'", planParameters.toContainerStop, toString(planTag), parent->getTagStr(), parent->getID()));
+        return false;
+    } else if (!planParameters.toChargingStation.empty() && !toStoppingPlace) {
+        WRITE_WARNING(TLF("Invalid to charging station '%' used in % of % '%'", planParameters.toChargingStation, toString(planTag), parent->getTagStr(), parent->getID()));
+        return false;
+    } else if (!planParameters.toParkingArea.empty() && !toStoppingPlace) {
+        WRITE_WARNING(TLF("Invalid to parking area '%' used in % of % '%'", planParameters.toParkingArea, toString(planTag), parent->getTagStr(), parent->getID()));
+        return false;
+    } else if (!planParameters.fromRoute.empty() && !fromRoute) {
+        WRITE_WARNING(TLF("Invalid from route '%' used in % of % '%'", planParameters.fromRoute, toString(planTag), parent->getTagStr(), parent->getID()));
+        return false;
+    } else if (!planParameters.toRoute.empty() && !toRoute) {
+        WRITE_WARNING(TLF("Invalid to route '%' used in % of % '%'", planParameters.toRoute, toString(planTag), parent->getTagStr(), parent->getID()));
+        return false;
+    } else {
+        return true;
+    }
+}
+
 void
 GNEPlanParents::addChildElements(GNEDemandElement* element) {
     if (fromEdge) {
